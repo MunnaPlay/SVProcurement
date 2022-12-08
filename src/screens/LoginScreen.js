@@ -50,7 +50,7 @@ const LoginScreen = ({navigation}) => {
         style={{
           padding: 10,
           borderRadius: 5,
-          backgroundColor: '#E2C2C6',
+          backgroundColor: 'white',
           width: width / 1.3,
           alignSelf: 'center',
           marginTop: 40,
@@ -61,7 +61,7 @@ const LoginScreen = ({navigation}) => {
         <View
           style={{
             borderWidth: 0.5,
-            borderColor: 'white',
+            borderColor: 'gray',
             marginTop: 10,
             marginBottom: 10,
           }}
@@ -72,9 +72,10 @@ const LoginScreen = ({navigation}) => {
             alignItems: 'center',
             width: width / 1.5,
             backgroundColor: 'white',
-            borderRadius: 10,
             marginTop: 20,
             alignSelf: 'center',
+            borderBottomColor:'gray',
+            borderBottomWidth:1
           }}>
           <EvilIcons name="user" size={28} style={{marginLeft: 5}} />
           <TextInput
@@ -88,9 +89,10 @@ const LoginScreen = ({navigation}) => {
             alignItems: 'center',
             width: width / 1.5,
             backgroundColor: 'white',
-            borderRadius: 10,
             marginTop: 10,
             alignSelf: 'center',
+            borderBottomColor:'gray',
+            borderBottomWidth:1
           }}>
           <EvilIcons name="lock" size={28} style={{marginLeft: 5}} />
           <TextInput
@@ -103,10 +105,10 @@ const LoginScreen = ({navigation}) => {
           onPress={() => checkLogin()}
           style={{
             width: width / 1.5,
-            backgroundColor: '#9046CF',
+            backgroundColor: '#F4A120',
             alignSelf: 'center',
             borderRadius: 5,
-            marginTop: 15,
+            marginTop: 30,
             padding: 10,
             marginBottom: 20,
           }}>

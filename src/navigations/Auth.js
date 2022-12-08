@@ -1,6 +1,6 @@
-import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
+import { View, Text, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native'
 import React,{useEffect} from 'react'
-import {LOGO} from '../components/images';
+import {Logo} from '../components/images';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -16,14 +16,15 @@ const Auth = ({navigation}) => {
   },[])
   return (
     <View style={{backgroundColor:'white',flex:1,justifyContent:'center',alignItems:'center'}}>
-      <Image source={LOGO} style={{height:width/1.5,width:width/1.5}} />
-      <Text style={{fontSize:26,color:'black',fontWeight:'500',textAlign:'center'}}>
+      <Text style={{fontSize:24,color:'black'}}>Welcome to SupplyValid</Text>
+      <Image source={Logo} style={{height:115,width:250,marginTop:100}} />
+        {/* <Text style={{fontSize:26,color:'black',fontWeight:'500',textAlign:'center'}}>
         Supply Valid
-      </Text>
-      <Text style={{fontSize:26,color:'black',fontWeight:'500',textAlign:'center'}}>
+      </Text> */}
+      {/* <Text style={{fontSize:26,color:'black',fontWeight:'500',textAlign:'center'}}>
         Procurement
-      </Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{backgroundColor:'#9046CF',marginTop:100,width:width/2.5,padding:10,borderRadius:10,flexDirection:'row',justifyContent:'center'}}>
+      </Text> */}
+      <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{backgroundColor:'#F4A120',marginTop:100,width:width/2.5,padding:10,borderRadius:10,flexDirection:'row',justifyContent:'center'}}>
         <Text style={{textAlign:'center',color:'#FFF3F0',fontWeight:'500',fontSize:18}}>Starts Here</Text>
         <AntDesign name='arrowright' style={{fontSize:20,marginTop:3,marginLeft:5,color:'white'}} />
       </TouchableOpacity>
