@@ -26,7 +26,7 @@ const data=[
 ]
 const MainScreen = () => {
   return (
-    <View style={{padding:10}}>
+    <View style={{padding:10,flex:1}}>
       <FlatList 
         data={data}
         renderItem={(items) => <DashboardCard data={items.item} />}

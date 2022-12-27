@@ -5,7 +5,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const DrawerHeader = (props) => {
-  console.log(props)
   return (
     <View style={{flex:1,backgroundColor:'white'}}>
       <View style={{padding:20,flexDirection:'row',alignItems:'center',paddingBottom:10}}>

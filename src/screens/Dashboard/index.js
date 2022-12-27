@@ -6,5 +6,6 @@ import Transfer from './Transfer';
 import Receive from './Receive';
 import Sales from './Sales';
 import Procurement from './Procurement';
+import L1Scanner from './L1Scanner';
 
-export {MainScreen, L1Scanning, L2Scanning, Dispatch, Transfer, Receive, Sales, Procurement};
+export {MainScreen, L1Scanning, L2Scanning, Dispatch, Transfer, Receive, Sales, Procurement, L1Scanner};
