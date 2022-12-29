@@ -71,12 +71,6 @@ const DrawerHeader = (props) => {
             Receive
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Sales')} style={{marginTop:10,padding:8,borderBottomColor:'gray',borderBottomWidth:1,flexDirection:'row'}}>
-          <MaterialCommunityIcons name='point-of-sale' size={18} style={{marginLeft:10,marginRight:10,color:'black'}} />
-          <Text style={{fontSize:15,fontWeight:'500',color:'black'}}>
-            Sale
-          </Text>
-        </TouchableOpacity>
         <TouchableOpacity onPress={() => props.navigation.navigate('Procurement')} style={{marginTop:10,padding:8,borderBottomColor:'gray',borderBottomWidth:1,flexDirection:'row'}}>
           <MaterialCommunityIcons name='handshake-outline' size={18} style={{marginLeft:10,marginRight:10,color:'black'}} />
           <Text style={{fontSize:15,fontWeight:'500',color:'black'}}>

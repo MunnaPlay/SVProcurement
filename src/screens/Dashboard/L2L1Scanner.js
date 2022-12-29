@@ -6,13 +6,13 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const {height, width} = Dimensions.get('screen');
 
-const L1Scanner = () => {
-  const [isScanL1, setIsScanL1] = useState(false);
-  const [scanDataL1, setScanDataL1] = useState([]);
+const L2L1Scanner = ({navigation}) => {
+  const [isScanL2L2, setIsScanL2L2] = useState(false);
+  const [scanDataL2L2, setScanDataL2L2] = useState([]);
 
   const onSuccess=async(e)=>{
-    setIsScanL1(false)
-    const filter = scanDataL1.filter((data) => data.data==e.data);
+    setIsScanL2L2(false)
+    const filter = scanDataL2L2.filter((data) => data.data==e.data);
     if(filter.length==0)
     {
       if(e.data.charAt(0)!=1 || e.data.charAt(0)!='1')
@@ -21,7 +21,7 @@ const L1Scanner = () => {
       }
       else
       {
-        setScanDataL1([...scanDataL1,e]);
+        setScanDataL2L2([...scanDataL2L2,e]);
         alert('QR Code Scan')
       }
     }
@@ -32,13 +32,13 @@ const L1Scanner = () => {
   }
 
   const ShowData=()=>{
-    console.log(scanDataL1[0].data)
+    console.log(scanDataL2L2[0].data)
   }
 
   return (
     <View style={{flex:1}}>
       {
-        isScanL1==true ?
+        isScanL2L2==true ?
         (
           <View style={{padding:10}}>
           <Text style={{textAlign:'center'}}>Capturing...</Text>
@@ -51,7 +51,7 @@ const L1Scanner = () => {
           </View>
         ) : 
         (<View style={{padding:20,alignItems:'center',margin:20,backgroundColor:'white'}}>
-        <TouchableOpacity onPress={() => setIsScanL1(true)} style={{backgroundColor:'#F4A120',width:width/1.3,borderRadius:5,paddingLeft:10}}>
+        <TouchableOpacity onPress={() => setIsScanL2L2(true)} style={{backgroundColor:'#F4A120',width:width/1.3,borderRadius:5,paddingLeft:10}}>
           <Text style={{textAlign:'center',padding:5,fontSize:16,fontWeight:'600',color:'#FFF'}}>
             Scan QR Code
           </Text>
@@ -66,7 +66,7 @@ const L1Scanner = () => {
         <Text style={{flex:1,textAlign:'center'}}>Delete</Text>
       </View>
       <FlatList 
-        data={scanDataL1}
+        data={scanDataL2L2}
         renderItem={(items) => (<View style={{flexDirection:'row',padding:5}}>
             <Text style={{flex:1,textAlign:'center'}}>{items.index + 1}</Text>
             <Text style={{flex:1,textAlign:'center'}}>{items.item.data}</Text>
@@ -74,7 +74,7 @@ const L1Scanner = () => {
           </View>)}
       />
       </View>
-      <TouchableOpacity onPress={() => ShowData()} style={{backgroundColor:'#F4A120',width:width/1.3,borderRadius:5,paddingLeft:10,margin:15,alignSelf:'center'}}>
+      <TouchableOpacity onPress={() => alert('Done')} style={{backgroundColor:'#F4A120',width:width/1.3,borderRadius:5,paddingLeft:10,margin:15,alignSelf:'center'}}>
         <Text style={{textAlign:'center',padding:12,fontSize:16,fontWeight:'600',color:'#FFF'}}>
           Save
         </Text>
@@ -83,7 +83,7 @@ const L1Scanner = () => {
   )
 }
 
-export default L1Scanner;
+export default L2L1Scanner;
 
 const styles = StyleSheet.create({
   container: {

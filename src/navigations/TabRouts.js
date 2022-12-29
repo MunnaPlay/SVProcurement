@@ -9,7 +9,6 @@ import {
   Dispatch,
   Transfer,
   Receive,
-  Sales,
   Procurement,
 } from '../screens/Dashboard';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -87,16 +86,6 @@ function TabRouts({navigation}) {
           },
         }}
         component={Receive}
-      />
-      <Tab.Screen
-        name="Sales"
-        options={{
-          headerTitle: props => <LogoTitle {...props} title="Dashboard" />,
-          tabBarIcon: ({focused, color, size}) => {
-            return <MaterialCommunityIcons name={'point-of-sale'} size={size} color={color} />;
-          },
-        }}
-        component={Sales}
       />
       <Tab.Screen
         name="Procurement"

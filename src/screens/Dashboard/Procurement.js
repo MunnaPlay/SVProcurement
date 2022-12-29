@@ -8,7 +8,7 @@ const Procurement = () => {
       <View style={{padding:20,alignItems:'center',margin:20,backgroundColor:'white'}}>
         <TextInput 
           style={{backgroundColor:'white',width:width/1.3,borderRadius:5,paddingLeft:10,borderWidth:0.5}}
-          placeholder={'Customer Name'}
+          placeholder={'Lot ID'}
         />
         <TextInput 
           style={{backgroundColor:'white',width:width/1.3,borderRadius:5,paddingLeft:10,borderWidth:0.5,marginTop:10}}
